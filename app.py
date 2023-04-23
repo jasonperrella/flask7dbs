@@ -94,7 +94,7 @@ app = Flask(__name__)
 def form():
     return render_template('my-form.html')
 
-# handle venue POST and serve result web page
+# handle venue POST and serve result web page     METHODS
 @app.route('/venue-handler', methods=['POST'])
 def venue_handler():
     rows = connect('SELECT venue_id, title FROM events WHERE venue_id = ' + request.form['venue_id'] + ';')
